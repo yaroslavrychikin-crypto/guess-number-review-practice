@@ -4,7 +4,11 @@ SECRET = random.randint(1, 100)
 
 attempts = 0
 while True:
-    guess = int(input("Ваша догадка: "))
+    try:
+        guess = int(input("Ваша догадка: "))
+    except ValueError
+        print("Пожалуйста, введите корректное число!")
+        
     attempts += 1
     if guess < SECRET:
         print("Больше")
